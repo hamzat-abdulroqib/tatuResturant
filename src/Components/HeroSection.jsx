@@ -1,4 +1,6 @@
 import React from "react";
+// import about from "../Pages/About";
+import { Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 
 import heroImageDesktop from "../assets/hero1.webp";
@@ -20,31 +22,37 @@ const HeroSection = () => {
 
       <nav className="relative z-10 hidden items-center justify-between px-8 py-4 md:flex">
         <div className="flex items-center gap-6">
-          {["STAY", "OFFERS", "DINE", "EVENTS", "ABOUT THE HOTEL"].map(
-            (item) => (
-              <a
-                key={item}
-                href="#"
-                className="flex items-center gap-1 text-xs font-semibold tracking-wider hover:opacity-80"
-              >
-                <span>{item}</span>
-                {(item === "STAY" ||
-                  item === "DINE" ||
-                  item === "EVENTS" ||
-                  item === "ABOUT THE HOTEL") && (
-                  <ChevronDown className="h-4 w-4" />
-                )}
-              </a>
-            )
-          )}
+          {[
+            { label: "STAY", path: "/stay" },
+            { label: "OFFERS", path: "/offers" },
+            { label: "DINE", path: "/dine" },
+            { label: "EVENTS", path: "/events" },
+            { label: "ABOUT THE HOTEL", path: "/about" },
+          ].map((item) => (
+            <Link
+              key={item.label}
+              to={item.path}
+              className="flex items-center gap-1 text-xs font-semibold tracking-wider hover:opacity-80"
+            >
+              <span>{item.label}</span>
+              {(item.label === "STAY" ||
+                item.label === "DINE" ||
+                item.label === "EVENTS" ||
+                item.label === "ABOUT THE HOTEL") && (
+                <ChevronDown className="h-4 w-4" />
+              )}
+            </Link>
+          ))}
         </div>
 
-        <button
-          type="button"
-          className="bg-white px-5 py-3 text-xs font-bold tracking-wider text-black hover:bg-gray-200"
-        >
-          CHECK RATES
-        </button>
+        <Link to="/booking">
+          <button
+            type="button"
+            className="bg-white px-5 py-3 text-xs font-bold tracking-wider text-black hover:bg-gray-200"
+          >
+            CHECK RATES
+          </button>
+        </Link>
       </nav>
 
       <div className="absolute bottom-32 left-8 right-8 z-10 text-center md:bottom-16 md:left-8 md:right-auto md:text-left">
@@ -58,12 +66,14 @@ const HeroSection = () => {
       </div>
 
       <div className="absolute bottom-8 left-8 right-8 z-10 md:hidden">
-        <button
-          type="button"
-          className="w-full bg-white px-5 py-4 text-xs font-bold tracking-wider text-black hover:bg-gray-200"
-        >
-          CHECK RATES
-        </button>
+        <Link to="/booking" className="w-full">
+          <button
+            type="button"
+            className="w-full bg-white px-5 py-4 text-xs font-bold tracking-wider text-black hover:bg-gray-200"
+          >
+            CHECK RATES
+          </button>
+        </Link>
       </div>
     </div>
   );

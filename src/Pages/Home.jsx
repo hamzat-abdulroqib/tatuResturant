@@ -8,6 +8,7 @@ import HeroSection from "../Components/HeroSection";
 import ImageCarousel from "../Components/Imagecarasoul";
 import InfoSection from "../Components/InfoSection";
 import LocationContact from "../Components/LocationContact";
+
 import WhyLoveIt from "../Components/WhyLoveIt";
 
 function Home() {
@@ -22,6 +23,7 @@ function Home() {
       <WhyLoveIt />
       <FeaturedOffers />
       <Explore />
+
       <LocationContact />
 
       <Footer />
