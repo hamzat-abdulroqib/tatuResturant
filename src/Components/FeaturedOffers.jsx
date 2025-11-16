@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import why1 from "../assets/why1.webp";
 import image1 from "../assets/image1.webp";
-
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -104,39 +104,33 @@ const FeaturedOffers = () => {
               promotion will leave you satisfied and Smiling!
             </p>
           </div>
-          <a
-            href="#"
+          <Link
+            to="/offers"
             className="shrink-0 ml-4 flex items-center gap-2 text-xs font-bold tracking-wider text-gray-900 hover:underline"
           >
             <span>SEE ALL OFFERS</span>
             <ArrowRight size={14} />
-          </a>
+          </Link>
         </div>
       </div>
 
-      {/* 2. Carousel Section */}
       <div className="relative mt-12">
-        {/* We use a container with negative margins and padding
-            to achieve the "peeking" card look on desktop */}
         <div className="mx-auto max-w-7xl px-4 sm:px-8">
           <Swiper
             modules={[Navigation, Pagination]}
-            // --- This is the responsive magic ---
-            slidesPerView={1} // Mobile: 1 slide
-            spaceBetween={16} // Space between slides
+            slidesPerView={1}
+            spaceBetween={16}
             breakpoints={{
-              // 768px (md) and up
               768: {
-                slidesPerView: 2, // Show 2 slides
+                slidesPerView: 2,
                 spaceBetween: 24,
               },
-              // 1024px (lg) and up
+
               1024: {
-                slidesPerView: 2.5, // <-- This creates the "peek"
+                slidesPerView: 2.5,
                 spaceBetween: 24,
               },
             }}
-            // --- Custom Navigation ---
             navigation={{
               nextEl: ".swiper-button-next-offers",
               prevEl: ".swiper-button-prev-offers",
@@ -156,7 +150,6 @@ const FeaturedOffers = () => {
         </div>
       </div>
 
-      {/* 3. Custom Navigation Controls */}
       <div className="flex items-center justify-end max-w-7xl mx-auto px-4 sm:px-8 mt-8">
         <div className="flex items-center gap-4">
           <button

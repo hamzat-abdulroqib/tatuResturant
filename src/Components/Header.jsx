@@ -38,10 +38,7 @@ const mobileNavItems = [
   {
     label: "About The Hotel",
     path: "/about",
-    subLinks: [
-      { label: "Our History", path: "/about/history" },
-      { label: "Location", path: "/about/location" },
-    ],
+    subLinks: [{ label: "Location", path: "/about/location" }],
   },
 ];
 
