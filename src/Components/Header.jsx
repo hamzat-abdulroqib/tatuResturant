@@ -31,7 +31,7 @@ const mobileNavItems = [
     path: "/events",
     subLinks: [
       { label: "Meetings & Conferences", path: "/events/meeting" },
-      { label: "Weddings", path: "/events/wedding" },
+      { label: "Weddings", path: "/events/weeding" },
       { label: "Social Events & Celebrations", path: "/events/social" },
     ],
   },

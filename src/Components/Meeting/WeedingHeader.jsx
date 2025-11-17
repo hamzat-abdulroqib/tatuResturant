@@ -5,7 +5,7 @@ import { ChevronDown } from "lucide-react";
 
 import heroImageDesktop from "../../assets/meeting.jpg";
 import heroImageMobile from "../../assets/meeting2.jpg";
-const WeedingHeader = () => {
+const MeetingHeading = () => {
   return (
     <div className="relative h-[90vh] md:h-[85vh] w-full text-white">
       <picture className="absolute inset-0 -z-20">
@@ -79,4 +79,4 @@ const WeedingHeader = () => {
   );
 };
 
-export default WeedingHeader;
+export default MeetingHeading;
