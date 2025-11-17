@@ -35,7 +35,6 @@ const GuestServices = () => {
         <span className="text-4xl font-semibold tracking-widest text-gray-900">
           GUEST SERVICES AND INFORMATION
         </span>
-        <ChevronDown size={20} className="text-gray-800" />
       </button>
 
       <div className="border-t border-gray-200">

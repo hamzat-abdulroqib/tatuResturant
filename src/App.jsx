@@ -10,7 +10,9 @@ import Dine from "./Pages/Dine.jsx";
 import Stay from "./Pages/Stay.jsx";
 import Offers from "./Pages/Offers.jsx";
 import Dining from "./Pages/Dining.jsx";
-// import Events from './Pages/Events.jsx';
+import Events from "./Pages/Events.jsx";
+import Meeting from "./Pages/Meeting.jsx";
+import Weeding from "./Pages/Weeding.jsx";
 
 function App() {
   return (
@@ -24,9 +26,11 @@ function App() {
         {/* <Route path="/booking" element={<Booking />} /> */}
         <Route path="/stay" element={<Stay />} />
         <Route path="/offers" element={<Offers />} />
-        {/* <Route path="/events" element={<Events />} /> */}
+        <Route path="/events" element={<Events />} />
         <Route path="/about" element={<About />} />
         <Route path="stay/viewallRoom" element={<ViewallRoom />} />
+        <Route path="events/meeting" element={<Meeting />} />
+        <Route path="events/weeding" element={<Weeding />} />
       </Routes>
     </BrowserRouter>
   );

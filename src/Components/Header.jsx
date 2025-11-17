@@ -9,8 +9,8 @@ const mobileNavItems = [
     label: "Stay",
     path: "/stay",
     subLinks: [
-      { label: "Rooms", path: "/stay/rooms" },
-      { label: "Suites", path: "/stay/suites" },
+      { label: "Rooms", path: "/stay/viewallRoom" },
+      { label: "Suites", path: "/stay/viewallRoom" },
     ],
   },
   {
@@ -22,16 +22,16 @@ const mobileNavItems = [
     label: "Dine",
     path: "/dine",
     subLinks: [
-      { label: "Tatu Restaurant", path: "/dine/tatu" },
-      { label: "Lord Delamere Terrace", path: "/dine/terrace" },
+      { label: "Tatu Restaurant", path: "/dine/dining" },
+      { label: "Lord Delamere Terrace", path: "/dine/dining" },
     ],
   },
   {
     label: "Events",
     path: "/events",
     subLinks: [
-      { label: "Meetings & Conferences", path: "/events/meetings" },
-      { label: "Weddings", path: "/events/weddings" },
+      { label: "Meetings & Conferences", path: "/events/meeting" },
+      { label: "Weddings", path: "/events/wedding" },
       { label: "Social Events & Celebrations", path: "/events/social" },
     ],
   },
