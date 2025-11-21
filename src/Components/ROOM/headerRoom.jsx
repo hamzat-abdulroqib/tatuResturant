@@ -1,7 +1,7 @@
 import React from "react";
 
 import { ChevronDown, ChevronRight } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const LocationIntro = () => {
   return (
     <div className="w-full bg-white font-serif">
@@ -21,12 +21,14 @@ const LocationIntro = () => {
           )}
         </div>
 
-        <button
-          type="button"
-          className="bg-black px-5 py-3 text-xs font-bold tracking-wider text-white hover:bg-gray-800"
-        >
-          CHECK RATES
-        </button>
+        <Link to="/checkrate">
+          <button
+            type="button"
+            className="bg-black px-5 py-3 text-xs font-bold tracking-wider text-white hover:bg-gray-800"
+          >
+            CHECK RATES
+          </button>
+        </Link>
       </nav>
 
       <section className="w-full px-4 py-12 md:py-20">

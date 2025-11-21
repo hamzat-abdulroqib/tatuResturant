@@ -8,10 +8,10 @@ import "swiper/css/navigation";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import mobileslide1 from "../assets/mobileside1.webp";
-import slide1 from "../assets/side1.webp";
-import slide2 from "../assets/side2.webp";
-import mobileslide2 from "../assets/mobileside2.webp";
+import mobileslide1 from "../assets/mobileside1.jpg";
+import slide1 from "../assets/side1.jpg";
+import slide2 from "../assets/side2.jpg";
+import mobileslide2 from "../assets/mobileside2.jpg";
 const slidesData = [
   {
     mobile: { mobileslide1 },

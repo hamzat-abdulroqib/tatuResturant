@@ -13,15 +13,15 @@ import {
   X,
 } from "lucide-react";
 import logo from "../assets/logo-booking.svg";
-import icon2 from "../assets/icon2.svg";
-import icon3 from "../assets/icon3.svg";
-import icon4 from "../assets/icon4.svg";
-import icon5 from "../assets/icon5.svg";
-import icon6 from "../assets/icon6.svg";
-import icon7 from "../assets/icon7.svg";
-import icon9 from "../assets/icon9.svg";
-import icon10 from "../assets/icon10.svg";
-import icon11 from "../assets/icon11.svg";
+import icon2 from "../assets/1.svg";
+import icon3 from "../assets/2.svg";
+import icon4 from "../assets/3.svg";
+import icon5 from "../assets/5.svg";
+import icon6 from "../assets/6.svg";
+import icon7 from "../assets/7.svg";
+import icon9 from "../assets/9.svg";
+import icon10 from "../assets/10.svg";
+import icon11 from "../assets/11.svg";
 const brands = [
   { name: "Sofitel", logoSrc: { logo } },
   { name: "sbe", logoSrc: { icon3 } },

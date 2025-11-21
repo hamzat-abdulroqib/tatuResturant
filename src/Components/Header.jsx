@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-
+import PropTypes from "prop-types";
 import { ChevronDown, User, Menu, X, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.svg";
+import defaultLogo from "../assets/logo.svg";
 
-const mobileNavItems = [
+const DEFAULT_MOBILE_NAV_ITEMS = [
   {
     label: "Stay",
     path: "/stay",
@@ -42,7 +42,7 @@ const mobileNavItems = [
   },
 ];
 
-function MobileMenu({ onClose }) {
+function MobileMenu({ onClose, navItems, logoSrc }) {
   const [openAccordion, setOpenAccordion] = useState("Events");
 
   const toggleAccordion = (label) => {
@@ -56,9 +56,9 @@ function MobileMenu({ onClose }) {
           <X className="h-6 w-6" />
         </button>
         <Link to="/" onClick={onClose}>
-          <img src={logo} alt="Fairmont The Norfolk" className="h-8" />
+          <img src={logoSrc} alt="Fairmont The Norfolk" className="h-8" />
         </Link>
-        <Link to="/my-account" onClick={onClose} aria-label="My Account">
+        <Link to="/login" onClick={onClose} aria-label="My Account">
           <User className="h-6 w-6" />
         </Link>
       </div>
@@ -74,7 +74,7 @@ function MobileMenu({ onClose }) {
         </Link>
 
         <nav className="space-y-4">
-          {mobileNavItems.map((item) => {
+          {navItems.map((item) => {
             const isOpen = openAccordion === item.label;
 
             if (!item.subLinks) {
@@ -131,7 +131,16 @@ function MobileMenu({ onClose }) {
   );
 }
 
-const Header = () => {
+MobileMenu.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  navItems: PropTypes.array.isRequired,
+  logoSrc: PropTypes.string.isRequired,
+};
+
+const Header = ({
+  logoSrc = defaultLogo,
+  mobileNavItems = DEFAULT_MOBILE_NAV_ITEMS,
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -168,7 +177,7 @@ const Header = () => {
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <Link to="/" aria-label="Fairmont The Norfolk, Homepage">
             <img
-              src={logo}
+              src={logoSrc}
               alt="Fairmont The Norfolk"
               className="w-28 md:w-36"
             />
@@ -176,7 +185,7 @@ const Header = () => {
         </div>
 
         <div className="flex items-center gap-6">
-          <Link to="/my-account" className="md:hidden" aria-label="My Account">
+          <Link to="/login" className="md:hidden" aria-label="My Account">
             <User className="h-6 w-6" />
           </Link>
 
@@ -192,7 +201,7 @@ const Header = () => {
               <ChevronDown className="h-4 w-4" />
             </button>
             <Link
-              to="/my-account"
+              to="/login"
               className="flex items-center gap-2 text-sm font-light hover:text-black"
             >
               <User className="h-5 w-5" />
@@ -202,9 +211,20 @@ const Header = () => {
         </div>
       </header>
 
-      {isMenuOpen && <MobileMenu onClose={() => setIsMenuOpen(false)} />}
+      {isMenuOpen && (
+        <MobileMenu
+          onClose={() => setIsMenuOpen(false)}
+          navItems={mobileNavItems}
+          logoSrc={logoSrc}
+        />
+      )}
     </>
   );
+};
+
+Header.propTypes = {
+  logoSrc: PropTypes.string,
+  mobileNavItems: PropTypes.array,
 };
 
 export default Header;

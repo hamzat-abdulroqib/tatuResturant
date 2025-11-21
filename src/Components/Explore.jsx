@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import why1 from "../assets/why1.webp";
 import image1 from "../assets/image1.webp";
+import { Link } from "react-router-dom";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -65,9 +66,11 @@ const OfferCard = ({ offer }) => (
     </div>
 
     <div className="flex gap-6 p-6 ">
-      <button className="text-xs font-bold tracking-wider border border-gray-800 px-5 py-3 text-gray-900 hover:bg-gray-100">
-        SEE DETAILS
-      </button>
+      <Link to="/dine/dining">
+        <button className="text-xs font-bold tracking-wider border border-gray-800 px-5 py-3 text-gray-900 hover:bg-gray-100">
+          SEE DETAILS
+        </button>
+      </Link>
     </div>
   </div>
 );
@@ -85,13 +88,13 @@ const Explore = () => {
               </span>
             </h2>
           </div>
-          <a
-            href="#"
+          <Link
+            to="dine/dining"
             className="shrink-0 ml-4 flex items-center gap-2 text-xs font-bold tracking-wider text-gray-900 hover:underline"
           >
             <span>SEE ALL OPTION</span>
             <ArrowRight size={14} />
-          </a>
+          </Link>
         </div>
       </div>
 

@@ -66,7 +66,7 @@ const Dinehero = () => {
       </div>
 
       <div className="absolute bottom-8 left-8 right-8 z-10 md:hidden">
-        <Link to="/booking" className="w-full">
+        <Link to="/check" className="w-full">
           <button
             type="button"
             className="w-full bg-white px-5 py-4 text-xs font-bold tracking-wider text-black hover:bg-gray-200"

@@ -17,7 +17,7 @@ const offers = [
     perk: "30% discount on spa",
     dates: "Available through December 31, 2025",
     description:
-      "As a UAE, India/UK Resident, indulge at Fairmont The Norfolk with a special rate where luxury living meets tranquility. Enjoy 15% off dining and 30% off spa services. Elevate your experience with gourmet delights and revitalizing treatments. Book now to discover true luxury and unforgettable moments.",
+      "As a UAE, India/UK Resident, indulge at Fairmont The Norfolk with a special rate where luxury living meets tranquility. Enjoy 15% off dining and 30% off spa services. Elevate your experience with gourmet delights and revitalizing treatments.",
   },
   {
     title: "THE PERFECT SPA ESCAPE",
@@ -77,9 +77,11 @@ const OfferCard = ({ offer }) => (
     </div>
 
     <div className="flex gap-6 p-6 border-x border-b border-gray-200">
-      <button className="text-xs font-bold tracking-wider border border-gray-800 px-5 py-3 text-gray-900 hover:bg-gray-100">
-        BOOK OFFER
-      </button>
+      <Link to="/book-stay">
+        <button className="text-xs font-bold tracking-wider border border-gray-800 px-5 py-3 text-gray-900 hover:bg-gray-100">
+          BOOK OFFER
+        </button>
+      </Link>
       <button className="flex items-center gap-2 text-xs font-bold tracking-wider text-gray-900 hover:underline">
         <span>EXPLORE MORE</span>
         <ArrowRight size={14} />
@@ -92,7 +94,6 @@ const FeaturedOffers = () => {
   return (
     <section className="w-full bg-white py-12 md:py-20 font-serif overflow-x-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-8">
-        {/* 1. Header Section */}
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-3xl md:text-4xl text-gray-900">

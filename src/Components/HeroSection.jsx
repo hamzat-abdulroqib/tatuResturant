@@ -45,7 +45,7 @@ const HeroSection = () => {
           ))}
         </div>
 
-        <Link to="/booking">
+        <Link to="/checkrate">
           <button
             type="button"
             className="bg-white px-5 py-3 text-xs font-bold tracking-wider text-black hover:bg-gray-200"

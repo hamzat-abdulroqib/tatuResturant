@@ -1,5 +1,6 @@
 import React from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const InfoSection = () => {
   return (
@@ -38,14 +39,16 @@ const InfoSection = () => {
             </div>
 
             <div className="mt-8 sm:mt-10">
-              <button
-                type="button"
-                className="w-full sm:w-auto bg-gray-900 px-6 py-4 
+              <Link to="/booking">
+                <button
+                  type="button"
+                  className="w-full sm:w-auto bg-gray-900 px-6 py-4 
                            text-xs font-bold tracking-wider text-white 
                            hover:bg-gray-700 transition"
-              >
-                BOOK A TABLE
-              </button>
+                >
+                  BOOK A TABLE
+                </button>
+              </Link>
             </div>
           </div>
 
